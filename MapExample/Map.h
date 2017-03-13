@@ -12,5 +12,6 @@ public:
 
 	Location * CurrentLocation = nullptr;
 	std::string GetPathBackToHome();
+	void Move(Location *newLocation);
 };
 

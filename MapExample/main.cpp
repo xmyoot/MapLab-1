@@ -7,6 +7,7 @@ void GoSouth(Map &map);
 void GoEast(Map &map);
 void GoWest(Map &map);
 
+
 int main()
 {
 	auto map = Map("Home");
@@ -19,6 +20,7 @@ int main()
 		cout << "3) Go East" << endl;
 		cout << "4) Go South" << endl;
 		cout << "5) Go west" << endl;
+		cout << "6) Path To Home" << endl;
 		cout << "0) Exit" << endl;
 		cin >> choice;
 
@@ -29,6 +31,7 @@ int main()
 		case 3: GoEast(map); break;
 		case 4: GoSouth(map); break;
 		case 5: GoWest(map); break;
+		case 6: system("cls");  cout << map.GetPathBackToHome() << endl; break;
 		default: cout << "Enter a valid option"; break;
 		}
 		system("pause");
@@ -55,7 +58,7 @@ void GoNorth(Map &map)
 		cout << "You are at: " + newLocation->DisplayLocationInfo();
 	}
 	newLocation->South = map.CurrentLocation;
-	map.CurrentLocation = newLocation;	
+	map.Move(newLocation);	
 	return;
 }
 
