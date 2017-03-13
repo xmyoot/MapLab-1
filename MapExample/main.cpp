@@ -24,13 +24,14 @@ int main()
 
 		switch (choice) 
 		{
-		case 1: map.CurrentLocation->DisplayLocationInfo(); break;
+		case 1: cout << "Current Location: " << map.CurrentLocation->DisplayLocationInfo(); break;
 		case 2: GoNorth(map); break;
 		case 3: GoEast(map); break;
 		case 4: GoSouth(map); break;
 		case 5: GoWest(map); break;
 		default: cout << "Enter a valid option"; break;
 		}
+		system("pause");
 	}
 	
 	return 0;
@@ -45,77 +46,30 @@ void GoNorth(Map &map)
 		cout << "You haven't been here before, enter a name for this place: ";
 		string name;
 		cin >> name;
-		map.CurrentLocation->North = new Location(name);
+		newLocation = new Location(name);
 		cout << "This place is now called: " + name << endl;
-		system("pause");		
+		
 	}
 	else
 	{
 		cout << "You are at: " + newLocation->DisplayLocationInfo();
-	}	
-	map.CurrentLocation = newLocation;
+	}
+	newLocation->South = map.CurrentLocation;
+	map.CurrentLocation = newLocation;	
 	return;
 }
 
 void GoEast(Map &map)
 {
-	auto newLocation = map.CurrentLocation->East;
-	if (newLocation == nullptr)
-	{
-		system("cls");
-		cout << "You haven't been here before, enter a name for this place: ";
-		string name;
-		cin >> name;
-		map.CurrentLocation->East = new Location(name);
-		cout << "This place is now called: " + name << endl;
-		system("pause");
-	}
-	else
-	{
-		cout << "You are at: " + newLocation->DisplayLocationInfo();
-	}
-	map.CurrentLocation = newLocation;
-	return;
+	//TODO: Implement This
 }
 
 void GoSouth(Map &map)
 {
-	auto newLocation = map.CurrentLocation->South;
-	if (newLocation == nullptr)
-	{
-		system("cls");
-		cout << "You haven't been here before, enter a name for this place: ";
-		string name;
-		cin >> name;
-		map.CurrentLocation->South = new Location(name);
-		cout << "This place is now called: " + name << endl;
-		system("pause");
-	}
-	else
-	{
-		cout << "You are at: " + newLocation->DisplayLocationInfo();
-	}
-	map.CurrentLocation = newLocation;
-	return;
+	//TODO: Implement This
 }
 
 void GoWest(Map &map)
 {
-	auto newLocation = map.CurrentLocation->West;
-	if (newLocation == nullptr)
-	{
-		system("cls");
-		cout << "You haven't been here before, enter a name for this place: ";
-		string name;
-		cin >> name;
-		map.CurrentLocation->West = new Location(name);
-		cout << "This place is now called: " + name << endl;
-		system("pause");
-	}
-	else
-	{
-		cout << "You are at: " + newLocation->DisplayLocationInfo();
-	}
-	map.CurrentLocation = newLocation;
-	return;
+	//TODO: Implement This
 }

@@ -11,3 +11,9 @@ Map::Map(std::string startLocationName)
 Map::~Map()
 {
 }
+
+std::string Map::GetPathBackToHome()
+{
+	//TODO: Implement this
+	return std::string();
+}

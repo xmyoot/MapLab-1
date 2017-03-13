@@ -11,5 +11,6 @@ public:
 	~Map();
 
 	Location * CurrentLocation = nullptr;
+	std::string GetPathBackToHome();
 };
 
