@@ -5,9 +5,11 @@ class Map
 {
 private:
 	std::stack<Location *> _locationsVisited;
-	Location *_currentLocation = nullptr;
+	
 public:
-	Map(int startLocation);
+	Map(std::string startLocationName);
 	~Map();
+
+	Location * CurrentLocation = nullptr;
 };
 

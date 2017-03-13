@@ -2,9 +2,9 @@
 
 
 
-Map::Map(int startLocation)
+Map::Map(std::string startLocationName)
 {
-	_currentLocation = new Location(startLocation);
+	CurrentLocation = new Location(startLocationName);
 }
 
 
