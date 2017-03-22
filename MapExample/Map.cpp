@@ -26,7 +26,3 @@ Location * Map::LookupLocationOnMap(int x, int y)
 	return _mapLookup[hash];
 }
 
-std::string Map::GetPathBackToHome()
-{
-	return "TODO: Implement this";
-}

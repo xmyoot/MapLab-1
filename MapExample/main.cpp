@@ -59,6 +59,8 @@ void GoNorth(Map &map)
 			cin >> name;
 			newLocation = new Location(name, newX, newY);
 			cout << "This place is now called: " + name << endl;
+			string direction = name + " (" + std::to_string(newX) + "," + std::to_string(newY) + ")";
+			map.addedDirection(direction);
 		} else {
 			cout << "You've been here before." << existing->DisplayLocationInfo();
 			newLocation = existing;
@@ -69,7 +71,8 @@ void GoNorth(Map &map)
 	}
 	newLocation->South = map.CurrentLocation;
 	map.CurrentLocation->North = newLocation;
-	map.Move(newLocation);	
+	map.Move(newLocation);
+	
 	return;
 }
 
@@ -93,6 +96,8 @@ void GoEast(Map &map)
 			cin >> name;
 			newLocation = new Location(name, newX, newY);
 			cout << "This place is now called: " + name << endl;
+			string direction = name + " (" + std::to_string(newX) + "," + std::to_string(newY) + ")";
+			map.addedDirection(direction);
 		}
 		else {
 			cout << "You've been here before." << existing->DisplayLocationInfo();
@@ -129,6 +134,8 @@ void GoSouth(Map &map)
 			cin >> name;
 			newLocation = new Location(name, newX, newY);
 			cout << "This place is now called: " + name << endl;
+			string direction = name + " (" + std::to_string(newX) + "," + std::to_string(newY) + ")";
+			map.addedDirection(direction);
 		}
 		else {
 			cout << "You've been here before." << existing->DisplayLocationInfo();
@@ -166,6 +173,8 @@ void GoWest(Map &map)
 			cin >> name;
 			newLocation = new Location(name, newX, newY);
 			cout << "This place is now called: " + name << endl;
+			string direction = name + " (" + std::to_string(newX) + "," + std::to_string(newY) + ")";
+			map.addedDirection(direction);
 		}
 		else {
 			cout << "You've been here before." << existing->DisplayLocationInfo();
