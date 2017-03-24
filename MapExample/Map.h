@@ -18,7 +18,7 @@ public:
 	void displayWayHome() {
 		std::cout << "YOU GOT HERE BY TAKING THIS PATH: " << std::endl;
 		for (auto x = 0; x < _wayHome.size(); x++) {
-			std::cout << _wayHome[x] << std::endl;
+			std::cout << (x + 1) << ") " << _wayHome[x] << std::endl;
 		}
 	}
 	Map(std::string startLocationName);
